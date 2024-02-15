@@ -10,8 +10,15 @@ const app=express()
 app.use(express.json())
 dotenv.config()
 app.get("/",(req,res)=>
-{
-    res.send("bonjour")
+{const now = new Date();
+    if(now.getHours()>=6&&now.getHours()<=12)
+    
+    res.send("Good morning")
+    else if(now.getHours()<=19)
+    res.send("Good after noon")
+    else
+    res.send("Good night")
+
 })
 
 
