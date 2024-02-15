@@ -14,7 +14,7 @@ app.get("/",(req,res)=>
     if(now.getHours()>=6&&now.getHours()<=12)
     
     res.send("Good morning")
-    else if(now.getHours()<=21)
+    else if(now.getHours()<=15)
     res.send("Good after noon")
     else
     res.send("Good night")
